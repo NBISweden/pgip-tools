@@ -12,6 +12,7 @@ actually be lower than the total number of sites with mutations.
 import itertools
 import logging
 import random
+import sys
 from datetime import datetime
 from inspect import signature
 from multiprocessing.dummy import Pool
@@ -169,6 +170,9 @@ def cli(
 ):
     setup_logging(debug)
     random.seed(seed)
+    if len(tsfile) == 0:
+        logger.warning("Missing argument TSFILE; no stats can be produced")
+        sys.exit(0)
 
     if len(sample_sets) == 0:
         sample_sets = None

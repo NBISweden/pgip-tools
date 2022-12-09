@@ -7,7 +7,7 @@ write_to = "src/pgip/_version.py"
 
 [project]
 name = "pgip"
-description = "Population genomics in practice - exercise package"
+description = "Population genomics in practice - tool package"
 readme = "README.md"
 # url = "https://nbissweden.github.io/pgip"
 keywords = ["bioinformatics"]
